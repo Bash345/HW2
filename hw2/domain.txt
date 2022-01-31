@@ -1,0 +1,49 @@
+Online University MAD30
+
+
+
+A. Overview
+============
+
+In this project i will present a model for an online university ,there are four classes(entities) in my project:
+
+1) Student : holds all students in the university.
+
+2) Courses : holds all Courses taught at the university.
+
+3) Instructor: holds all instructors in the university.
+
+4) InstructorDetail: holds an additional information about each instructor in the university.
+
+
+
+B. Relationships
+=================
+In this project i used all types of relationships between entities like one-to-one, one-to-many, many-to-one and many-to-many as following:-
+s
+one-to-one: the relationship between instructor and InstructorDetail is one-to-one which means that each instructor map to one instructorDetail and vice versa
+here i used bidirectional mapping i.e from instructor i can get its instructorDetail and vice versa
+
+one-to-many: the relationship between instructor and course is one-to-many which means that each instructor can teach many courses and at the same time
+each course is maped or taught by only one instructor
+
+many-to-one: the relationship between course and instructor is many-to-one which is the bidirectional relationship which descriped above
+
+many-to-many: the relationship between student and course is many-to-many which means that each student can study or enroll in  many courses and at the same time
+each course can be enrolled by many students. this relationship is broken by a junction table called "enrollments" which contains the primary key for each tables (student, course)
+
+
+
+C. Associations(Attributes)
+============================
+in this section i will list the all fields for each class
+
+1- Student ==>   id, fullName, level, list of enrolled courses.
+2- Courses ==>   id, title, code, instructor of this course and list of all enrollments in this course(list of students).
+3- Instructor==> id, fullName, instructorDetail object and list of all courses this instructor teach.
+4- InstructorDetail==> id, phone  number, email and instructor itself(bidirectional).
+
+
+
+
+
